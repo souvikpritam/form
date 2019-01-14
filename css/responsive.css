@@ -1,0 +1,218 @@
+/*=========== TABLE OF CONTENTS ============
+
+       00.Responsive Part
+
+======================================*/
+
+
+/*======================
+   00.Responsive Part
+   Breakpoint (1200px,991px,767px,460px)
+========================*/
+
+@media screen and (max-width: 1200px) {
+
+  td.table-content-2nd { margin-left: 31px; }
+
+  th.margin-tb-header-action-2nd-row-1st { left: 16px; }
+
+  th.margin-tb-header-action-1st-row-1st { left: -20px; } 
+
+  th.margin-tb-header-action-1st-row { left: 20px; }
+
+  .form input { width: 300px; }
+
+  a.btn-search-test { left: 74px; }
+
+  div.showing-1-5-of-7-tests-margin {
+    padding-left: 60px;
+  }
+}
+
+
+@media screen and (max-width: 991px) {
+  a.btn-retake-test-1st { width:170px; }
+  
+  a.btn-retake-test { width:170px; }
+
+  td.table-content-2nd { margin-left: 5px; }
+ 
+  .main { padding-bottom: 30px; }
+
+  .mdl-selectfield { top: -47px; left: 421px; }
+
+  .form input { margin-left: 114px; }
+
+  a.btn-search-test {
+    left: -105px;
+    width: 115px;
+    top: 7px;
+  }
+ 
+  div.showing-1-5-of-7-tests-margin {
+    padding-left: 170px;
+  }
+}
+
+
+@media screen and (max-width: 767px) {
+  table {
+    border: 0;
+  }
+
+  table caption {
+    font-size: 1.3em;
+  }
+  
+  table thead {
+    border: none;
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+  }
+  
+  table tr { display: block; }
+  
+  table td { display: block; text-align: right; }
+
+  h4 { font-size: 14px; }
+
+  .table-hover > tbody > tr:hover {
+    background-color: #ffffff;
+  }
+
+  a.btn-retake-test-1st {
+    float: none;
+    width: 105px;
+    height: 36px;
+    top: -5px;
+    padding: 7px;
+  }
+ 
+  th.margin-tb-header-score-1st,th.margin-tb-header-date-1st { left: 0px; }
+
+  .row.margin { margin-right: 6px; margin-left: 6px; }
+
+  a.btn-retake-test {
+    float: none;
+    width: 105px;
+    height: 36px;
+    top: -5px;
+    padding: 7px;
+  }
+
+  td.table-content-1st-table { margin: none; text-align: justify; }
+
+  td.margin-tb-header-score-1st-table { left: 0px; }
+
+  .margin { margin-left: 85px; }
+  
+  .form input { margin-left: -12px; width: 100%; }
+
+  a.btn-search-test {
+    width: 160px;
+    top:11px;
+    left: -12px;
+  }
+
+  .main { padding-bottom: 70px; }
+ 
+  table td::before {
+    /*
+    * aria-label has no advantage, it won't be read inside a table
+    content: attr(aria-label);
+    */
+    content: attr(data-label);
+    float: left;
+    font-weight: 700;
+    font-size: 14px;
+  }
+  
+  table td:last-child { border-bottom: 0; }
+  
+  div.showing-1-5-of-7-tests-margin {
+    top:-29px;
+    padding-left: 55px;
+  }
+  .mdl-selectfield { top: -26px; left: 41px; }
+
+  td.btn-margin { top: 0px; }
+
+  td.table-content { text-align: right; }
+  
+}
+
+@media screen and (max-width: 460px) {
+
+  table td::before {
+    float: none;
+    display: block;
+    text-align: center;
+  }
+  
+  a.btn-primary.btn-skill-overview,a.btn-retake-test,
+  a.btn-primary.btn-publication-design,.margin,a.btn-search-test,
+  .mdl-selectfield,a.btn-primary.btn-skill-overview-1st,
+  a.btn-retake-test-1st,a.btn-primary.btn-illustration-1st {
+    display: block;
+    margin: 0 auto;
+  }
+ 
+  a.btn-primary.btn-illustration-1st {
+    width: 155px;
+    font-size: 12px;
+    padding: 2px;
+    margin-top: 10px;
+  }
+    
+  a.btn-primary.btn-skill-overview,a.btn-primary.btn-skill-overview-1st {
+    width: 155px;
+    margin-top: 10px;
+  }
+  
+  a.btn-retake-test,a.btn-retake-test-1st {
+    width: 105px;
+    height: 36px;
+    top: -5px;
+    margin-top: 10px;     
+  }
+
+  a.btn-primary.btn-publication-design  {
+    width: 200px;
+    margin-top: 10px;
+  }
+
+ .margin { margin-top: 10px; }
+
+  a.btn-search-test { float: none; }
+
+  div.showing-1-5-of-7-tests-margin {
+    padding-left: 17px;
+    text-align: center;   
+  }
+
+  div.available-padding-bottom-margin { max-width: 192px; }
+
+  .mdl-selectfield {
+    left: 15px;
+    top: -18px;
+  }
+  td p.right-margin-date-score,p.date-added-margin {
+    display: block;
+    text-align: center;
+    margin-top: 10px;
+  }
+
+  .form input { font-size: 16px; }
+
+  select { font-size: 16px; }
+
+  .align-middle h6 { text-align: center; }
+
+}
+/*======================
+   00.End of Responsive Part
+========================*/

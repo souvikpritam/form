@@ -1,0 +1,758 @@
+/*=========== TABLE OF CONTENTS ============
+
+    00. Default Declaration
+    01. Short Cut CSS
+    02. Box Style
+    03. Table Layout
+    04. Table-border 
+    05. Row Margin
+    06. btn-skill-overview & btn-publication design
+    07. Table Border-Style
+    08. Font Awesome Style
+    09. Table title & content & also margin 
+    10. Button-retake-test & search-test-style
+    11. li & main  
+    12. input stylings
+    13. showing-1-5-of-7-tests-margin style
+    14. select starting stylings
+    15. Pagination
+    16. View downloads align-middle
+    
+======================================*/
+
+/*======================
+   00. Default Declaration
+========================*/
+
+a,
+a:hover,
+a:focus {
+  transition: 0.3s;
+  text-decoration: none;
+  color: #88CC29;
+}
+
+a { color: #17AEE6; }
+
+/*======================
+   00.End of Default Declaration
+========================*/
+
+/*======================
+   01. Short Cut CSS
+========================*/
+
+h3 {
+  font-size: 24px;
+  letter-spacing: 0.3px;
+  font-weight: 300;
+
+}
+
+
+h5,h4,h6 {
+  font-size: 16px;
+  font-weight: 400;
+
+}
+
+h3,h5 {
+  text-align: center;
+  text-transform: uppercase;
+  color: #212529;
+  opacity: 0.9;
+}
+
+h5 {
+  line-height: 24px;
+  letter-spacing: 1.5px;
+}
+
+h4 {
+  opacity: 0.54;
+  color: #212529;
+  letter-spacing: -0.3px;
+  
+}
+h6 {
+  color: #17AEE6;
+  letter-spacing: -0.27px;
+  line-height: 18px;
+}
+
+/*======================
+   01.End of Short Cut CSS
+========================*/
+
+
+/*======================
+   02.Box Style
+========================*/
+
+div.box {
+  
+  width:100%;
+  height: 100%;
+  box-shadow: 0 2px 4px 0 rgba(0,0,0,0.50);
+  padding-top: 20px;
+}
+
+/*======================
+   02.End of Box Style
+========================*/
+
+/*======================
+   03.Table Layout
+========================*/
+
+table.table  { border-collapse:collapse; table-layout: fixed; }
+
+/*======================
+   03.End of Table Layout
+========================*/
+
+
+/*======================
+   04.Table-border
+========================*/
+
+.table>thead>tr>th { vertical-align: bottom; border-bottom: 1px solid #ddd; }
+/*======================
+   04.End of Table-border
+========================*/
+
+
+/*======================
+   05.Row Margin
+========================*/
+
+.row.margin { margin-right: 24px; margin-left: -6px; }
+
+/*======================
+   05.End of Row Margin
+========================*/
+
+
+/*======================
+   06.btn-skill-overview & btn-publication design
+========================*/
+
+a.btn-primary.btn-publication-design,a.btn-primary.btn-skill-overview,
+a.btn-primary.btn-skill-overview-1st,a.btn-primary.btn-illustration-1st {
+  background-color: #868e96;
+  border-color: #868e96;
+  max-height: 24px;
+  border-radius: 20px;
+  font-weight: 700;
+  font-size: 12px;
+  color: #ffffff;
+  transition: 0.3s;
+  letter-spacing: 0.2px;
+  text-transform: uppercase;
+  padding: 3px;
+  display: inline-block;
+    
+}
+
+a.btn-primary.btn-skill-overview-1st,a.btn-primary.btn-illustration-1st { width: 152px; }
+
+a.btn-primary.btn-publication-design { width: 180px; }
+
+a.btn-primary.btn-skill-overview { width: 152px; }
+
+.button-title { text-align: center; }
+
+a.btn-primary.btn-skill-overview:hover,a.btn-primary.btn-publication-design:hover,
+a.btn-primary.btn-skill-overview-1st:hover,a.btn-primary.btn-illustration-1st:hover {
+  background-color: #FFC107;
+  border-color: #FFC107;
+  transition: 0.3s;
+}
+
+/*======================
+   06.End of btn-skill-overview & btn-publication design
+========================*/
+
+
+/*======================
+   07.Table Border-Style
+========================*/
+
+.table>tbody>tr>td, .table>tbody>tr>th, 
+.table>tfoot>tr>td, .table>tfoot>tr>th, 
+.table>thead>tr>td, .table>thead>tr>th {
+  
+  border-top: 1px solid #e6e6e6 !important;
+    
+}
+
+
+.table.table-2nd>thead>tr.border-first>th { border-top: none !important; }
+
+div.border-bottom {
+  border-bottom: 1px solid #e6e6e6;
+  width: 98%;
+}
+
+div.border-bottom-1st {
+  border-bottom: 1px solid #e6e6e6;
+  position: relative;
+  top:-20px;
+}
+
+/*======================
+   07.End of Table Border-Style
+========================*/
+
+
+/*======================
+   08.Font Awesome Style
+========================*/
+
+i.icon-check { font-size: 15px; color:#ffffff; }
+
+/*======================
+   08.End of Font Awesome Style
+========================*/
+
+/*======================
+   09.Table title & content & also margin
+========================*/
+
+
+th.table-title {
+  opacity: 0.54;
+  font-weight: 400;
+  font-size: 12px;
+  color: #212529;
+  letter-spacing: 1.5px;
+  text-align: center;
+  line-height: 18px;
+  text-transform: uppercase;
+}   
+
+td.table-content-1st-table {
+  font-weight: 400; 
+  font-size: 12px;
+  color: #212529;
+  letter-spacing: -0.2px;
+  line-height: 18px;
+}
+
+td.table-content,.btn-illustration-1st.table-content-2nd {
+  opacity: 0.9;  
+  font-weight: 400;  
+  font-size: 16px;
+  color: #212529;
+  letter-spacing: -0.3px;
+}
+
+td.table-content { text-align: center; line-height: 22px; }
+
+.btn-illustration-1st.table-content-2nd { margin-left: 60px; line-height: 18px; }
+
+td.row-padding { padding: 16px 0px !important; }
+
+td.row-padding-1st {
+  padding: 16px 0px !important;
+  position: relative;
+  top: 10px;
+
+}
+
+th.table-title-margin,th.margin-tb-header-score,
+td.margin-tb-header-score-1st-table,th.margin-tb-header-score,
+th.margin-tb-header-date,th.row-margin-1st-table,
+h5.tested-untested-margin, td.btn-margin {
+  position: relative;
+
+}  
+
+th.table-title-margin { top: 3px; }
+
+th.margin-tb-header-score { left: 0px !important; }
+
+td.margin-tb-header-score-1st-table {
+  left: 30px;
+
+}
+
+th.margin-tb-header-score { left: 46px; }
+
+th.margin-tb-header-action-1st-row { left: 50px; }
+
+th.margin-tb-header-date { left: 135px; }
+
+th.row-margin-1st-table { top: 3px; }
+
+div.available-padding-bottom-margin {
+  padding-bottom: 32px;
+  text-align: center; 
+}
+
+div.available-padding-bottom { padding-bottom: 45px; }
+
+div.tested-skills-padding-top { padding-top:25px; }
+
+div.untested-skills-padding-top { padding-top:10px; }
+
+h5.tested-untested-margin { top:7px; }
+
+td.btn-margin { top: 24px; }
+
+th.margin-tb-header-action-1st-row-1st { left: 5px; }
+
+th.margin-tb-header-action-2nd-row-1st { position: relative; left: 51px; }
+
+th.table-title-margin-skill { position: relative; left: -46px; }
+
+/*======================
+   09.End of Table title & content & also margin
+========================*/
+
+
+/*======================
+   10.Button-retake-test & search-test-style
+========================*/
+
+a.btn-retake-test,a.btn-search-test,a.btn-retake-test-1st {
+  
+  font-weight: 400;
+  font-size: 14px;
+  letter-spacing: 0.23px;
+  line-height: 20px;
+  display: inline-block;
+  border-radius: 2px;
+  transition: 0.3s;
+  color: #ffffff;
+  float: right;
+  position: relative;
+  background: #88CC29;
+  border: 2px solid #88CC29;
+  text-align: center;
+  box-shadow: 0 2px 4px 0 rgba(0,0,0,0.32);
+
+}
+
+a.btn-retake-test {
+  width: 256px;
+  height: 48px;
+  padding: 12px;
+  top: 12px;
+
+}
+
+a.btn-search-test {
+
+  width: 160px;
+  height: 40px;
+  padding: 10px;
+  left: 40px;
+  top:-35px;
+
+}
+
+a.btn-retake-test-1st {
+  width: 256px;
+  height: 48px;
+  padding: 12px;
+  top:-12px;
+}
+
+a.btn-retake-test:hover,a.btn-search-test:hover,a.btn-retake-test-1st:hover {
+  background: #7ab724;
+  color: #fff;
+  border: 2px solid #7ab724;
+  transition: 0.5s;
+}
+
+a.btn-retake-test:focus,a.btn-search-test:focus,a.btn-retake-test-1st:focus {
+  background: #94d13e;
+  color: #ffffff;
+  border: 2px solid #94d13e;
+  transition: 0.5s;
+}
+
+a.btn-retake-test:active,a.btn-search-test:active,a.btn-retake-test-1st:active {
+  background: #abdb69;
+  color: #ffffff;
+  border: 2px solid #abdb69;
+}
+
+
+/*======================
+   10.End of Button-retake-test & search-test-style
+========================*/
+
+
+/*======================
+   11.li & main
+========================*/
+
+.main { margin-top: 25px; }
+
+.main li { list-style: none; display: inline; }
+
+/*======================
+   11.End of li & main
+========================*/
+
+/*======================
+   12.input stylings 
+========================*/
+
+.form input         {
+  font-size:18px;
+  padding:10px 10px 10px 5px;
+  width:350px;
+  border:none;
+  border-bottom:1px solid #17AEE6;
+
+}
+
+.form input:focus { 
+  outline:none;
+  border-bottom:1px solid #e6e6e6;
+  transition: 0.3s 
+
+}
+
+/*======================
+   12.End of input stylings 
+========================*/
+
+
+/*======================
+   13.showing-1-5-of-7-tests-margin style
+========================*/
+
+div.showing-1-5-of-7-tests-margin {
+  position: relative;
+  top:-15px;
+  padding-left: 96px;
+
+}
+
+/*======================
+   13.End of showing-1-5-of-7-tests-margin style
+========================*/
+
+/*======================
+   14.select starting stylings
+========================*/
+
+select  {
+
+  width: 160px;
+  padding: 4px 0;
+  font-size: 16px;
+  color: #212529;
+  border: none;
+  border-bottom: 1px solid #17AEE6;
+  opacity: 0.9;
+  letter-spacing: -0.3px;
+  line-height: 24px;
+
+}
+
+/* Remove focus */
+select:focus { outline: none; }
+
+/* Hide label */
+.mdl-selectfield label { display: none; }
+
+/* Use custom arrow */
+.mdl-selectfield select {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+
+}
+
+.mdl-selectfield {
+  position: relative;
+  width: 190px;
+  top:-15px;
+  left: 42px;
+  
+}
+
+.mdl-selectfield:after {
+  position: absolute;
+  top:5px;
+  right:30px;
+
+  /* Styling the down arrow */
+  
+  content: "\f078";
+  color: #17AEE6 ;
+  font-weight: 900;
+  font-family: Font Awesome\ 5 Free;
+  pointer-events: none;  
+
+}
+
+/*======================
+   14.End of select starting stylings
+========================*/
+
+
+/*======================
+   15.Pagination
+========================*/
+
+.pagination>li>a, .pagination>li>span {
+    position: relative;
+    float: left;
+    padding: 6px 12px;
+    margin-left: -1px;
+    line-height: 1.42857143;
+    color: #868E96;
+    text-decoration: none;
+    background-color: #fff;
+    border: 1px solid #ddd;
+}
+
+.pagination>.active>a, .pagination>.active>a:focus, 
+.pagination>.active>a:hover, .pagination>.active>span, 
+.pagination>.active>span:focus, .pagination>.active>span:hover {
+    z-index: 3;
+    color: #17AEE6 !important;
+    cursor: default;
+    background-color: #fff;
+    border-color:#e6e6e6; 
+}
+
+/*======================
+   15.End of Pagination
+========================*/
+
+
+/*======================
+   16.View downloads align-middle
+========================*/
+
+.align-middle h6 { max-width: 190px; margin: 0 auto; }
+
+/*======================
+   16.End of View downloads align-middle
+========================*/
+
+/*=========== TABLE OF CONTENTS ============
+
+       00.Responsive Part
+
+======================================*/
+
+
+/*======================
+   00.Responsive Part
+   Breakpoint (1200px,991px,767px,460px)
+========================*/
+
+@media screen and (max-width: 1200px) {
+
+  td.table-content-2nd { margin-left: 31px; }
+
+  th.margin-tb-header-action-2nd-row-1st { left: 16px; }
+
+  th.margin-tb-header-action-1st-row-1st { left: -20px; } 
+
+  th.margin-tb-header-action-1st-row { left: 20px; }
+
+  .form input { width: 300px; }
+
+  a.btn-search-test { left: 74px; }
+
+  div.showing-1-5-of-7-tests-margin {
+    padding-left: 60px;
+  }
+}
+
+
+@media screen and (max-width: 991px) {
+  a.btn-retake-test-1st { width:170px; }
+  
+  a.btn-retake-test { width:170px; }
+
+  td.table-content-2nd { margin-left: 5px; }
+ 
+  .main { padding-bottom: 30px; }
+
+  .mdl-selectfield { top: -47px; left: 421px; }
+
+  .form input { margin-left: 114px; }
+
+  a.btn-search-test {
+    left: -105px;
+    width: 115px;
+    top: 7px;
+  }
+ 
+  div.showing-1-5-of-7-tests-margin {
+    padding-left: 170px;
+  }
+}
+
+
+@media screen and (max-width: 767px) {
+  table {
+    border: 0;
+  }
+
+  table caption {
+    font-size: 1.3em;
+  }
+  
+  table thead {
+    border: none;
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+  }
+  
+  table tr { display: block; }
+  
+  table td { display: block; text-align: right; }
+
+  h4 { font-size: 14px; }
+
+  .table-hover > tbody > tr:hover {
+    background-color: #ffffff;
+  }
+
+  a.btn-retake-test-1st {
+    float: none;
+    width: 105px;
+    height: 36px;
+    top: -5px;
+    padding: 7px;
+  }
+ 
+  th.margin-tb-header-score-1st,th.margin-tb-header-date-1st { left: 0px; }
+
+  .row.margin { margin-right: 6px; margin-left: 6px; }
+
+  a.btn-retake-test {
+    float: none;
+    width: 105px;
+    height: 36px;
+    top: -5px;
+    padding: 7px;
+  }
+
+  td.table-content-1st-table { margin: none; text-align: justify; }
+
+  td.margin-tb-header-score-1st-table { left: 0px; }
+
+  .margin { margin-left: 85px; }
+  
+  .form input { margin-left: -12px; width: 100%; }
+
+  a.btn-search-test {
+    width: 160px;
+    top:11px;
+    left: -12px;
+  }
+
+  .main { padding-bottom: 70px; }
+ 
+  table td::before {
+    /*
+    * aria-label has no advantage, it won't be read inside a table
+    content: attr(aria-label);
+    */
+    content: attr(data-label);
+    float: left;
+    font-weight: 700;
+    font-size: 14px;
+  }
+  
+  table td:last-child { border-bottom: 0; }
+  
+  div.showing-1-5-of-7-tests-margin {
+    top:-29px;
+    padding-left: 55px;
+  }
+  .mdl-selectfield { top: -26px; left: 41px; }
+
+  td.btn-margin { top: 0px; }
+
+  td.table-content { text-align: right; }
+  
+}
+
+@media screen and (max-width: 460px) {
+
+  table td::before {
+    float: none;
+    display: block;
+    text-align: center;
+  }
+  
+  a.btn-primary.btn-skill-overview,a.btn-retake-test,
+  a.btn-primary.btn-publication-design,.margin,a.btn-search-test,
+  .mdl-selectfield,a.btn-primary.btn-skill-overview-1st,
+  a.btn-retake-test-1st,a.btn-primary.btn-illustration-1st {
+    display: block;
+    margin: 0 auto;
+  }
+ 
+  a.btn-primary.btn-illustration-1st {
+    width: 155px;
+    font-size: 12px;
+    padding: 2px;
+    margin-top: 10px;
+  }
+    
+  a.btn-primary.btn-skill-overview,a.btn-primary.btn-skill-overview-1st {
+    width: 155px;
+    margin-top: 10px;
+  }
+  
+  a.btn-retake-test,a.btn-retake-test-1st {
+    width: 105px;
+    height: 36px;
+    top: -5px;
+    margin-top: 10px;     
+  }
+
+  a.btn-primary.btn-publication-design  {
+    width: 200px;
+    margin-top: 10px;
+  }
+
+ .margin { margin-top: 10px; }
+
+  a.btn-search-test { float: none; }
+
+  div.showing-1-5-of-7-tests-margin {
+    padding-left: 17px;
+    text-align: center;   
+  }
+
+  div.available-padding-bottom-margin { max-width: 192px; }
+
+  .mdl-selectfield {
+    left: 15px;
+    top: -18px;
+  }
+  td p.right-margin-date-score,p.date-added-margin {
+    display: block;
+    text-align: center;
+    margin-top: 10px;
+  }
+
+  .form input { font-size: 16px; }
+
+  select { font-size: 16px; }
+
+  .align-middle h6 { text-align: center; }
+
+}
+/*======================
+   00.End of Responsive Part
+========================*/
