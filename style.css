@@ -48,3 +48,8 @@ body {
 	color: #fff;
 	transition: .3s;
 }
+
+.error_msg {
+	color: red;
+    padding: 10px 0px;
+}
