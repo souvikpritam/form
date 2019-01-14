@@ -1,15 +1,23 @@
 <?php 
-
+$gender = "";
+$checkbox = "";
 if(isset($_POST['submit'])) {
 	$first_name = $_POST['first_name'];
 	if(empty($first_name)) {
 		$error_msg['first_name'] = "First Name is Required";
+	}
+	else if (!preg_match("/^[a-zA-Z ]*$/",$first_name)) {
+		$error_msg['first_name'] = "Only letter is allowed";
 	}
 
 	$last_name = $_POST['last_name'];
 	if(empty($last_name)) {
 		$error_msg['last_name'] = "Last Name is Required";
 	}
+	else if (!preg_match("/^[a-zA-Z ]*$/",$last_name)) {
+		$error_msg['last_name'] = "Only letter is allowed";
+	}
+
 	$email = $_POST['email'];
 	if(!filter_var($email,FILTER_VALIDATE_EMAIL)) {
 		$error_msg['email'] = "Email is Required";
@@ -18,6 +26,10 @@ if(isset($_POST['submit'])) {
 	$password = $_POST['password'];
 	if(empty($password)) {
 		$error_msg['password'] = "Password is Required";
+	}
+
+	else if (strlen($password) <= 8) {
+		$error_msg['password'] = "Password must be atleast 8 digits";
 	}
 
 	$mobile_no = $_POST['mobile_no'];
@@ -36,8 +48,18 @@ if(isset($_POST['submit'])) {
 	}
 
 	$select = $_POST['select_one'];
-	if($select == "") {
+	if($select == "NULL") {
 		$error_msg['select_one'] = "Option Must be selected";
+	}
+
+	$gender = $_POST['gender'];
+	if(empty($gender)) {
+		$error_msg['gender'] = "Gender is Required";
+	}
+
+	$gender = $_POST['checkbox'];
+	if(empty($checkbox)) {
+		$error_msg['checkbox'] = "Checkbox is Required";
 	}
 
 	$comment = $_POST['comment'];
@@ -47,6 +69,20 @@ if(isset($_POST['submit'])) {
 
 	$img = $_FILES['img']['name'];
 	$img_tmp = $_FILES['img']['tmp_name'];
+	$img_type = $_FILES['img']['type'];
+	$img_size = $_FILES['img']['size'];
+	if($img) {
+		if(($img_size <= 1024*1024) && (($img_type == "image/png") || ($img_type == "image/jpeg"))) {
+			move_uploaded_file($img_tmp, "uploads/".$img);
+		}
+		else {
+			$error_msg['img'] = "Please upload image png format and max 1MB";
+		}
+	}
+
+	else {
+		$error_msg['img'] = "File is required";
+	}
 }
 
 ?>
@@ -80,7 +116,7 @@ if(isset($_POST['submit'])) {
 						<p>First Name:</p>
 						<input type="text" name="first_name" value="" placeholder="" />
 						<div class="error_msg">
-							<?php if(isset($_POST['first_name'])) {
+							<?php if(isset($error_msg['first_name'])) {
 								echo $error_msg['first_name'];
 							} ?>
 						</div>	
@@ -89,7 +125,7 @@ if(isset($_POST['submit'])) {
 						<p>Last Name:</p>
 						<input type="text" name="last_name" value="" placeholder="" />
 						<div class="error_msg">
-							<?php if(isset($_POST['last_name'])) {
+							<?php if(isset($error_msg['last_name'])) {
 								echo $error_msg['last_name'];
 							} ?>
 						</div>	
@@ -98,7 +134,7 @@ if(isset($_POST['submit'])) {
 						<p>Email:</p>
 						<input type="email" name="email" value="" placeholder="" />
 						<div class="error_msg">
-							<?php if(isset($_POST['email'])) {
+							<?php if(isset($error_msg['email'])) {
 								echo $error_msg['email'];
 							} ?>
 						</div>
@@ -107,7 +143,7 @@ if(isset($_POST['submit'])) {
 						<p>Password:</p>
 						<input type="password" name="password" value="" placeholder="" />
 						<div class="error_msg">
-							<?php if(isset($_POST['password'])) {
+							<?php if(isset($error_msg['password'])) {
 								echo $error_msg['password'];
 							} ?>
 						</div>
@@ -116,7 +152,7 @@ if(isset($_POST['submit'])) {
 						<p>Mobile No:</p>
 						<input type="text" name="mobile_no" value="" placeholder="" />
 						<div class="error_msg">
-							<?php if(isset($_POST['mobile_no'])) {
+							<?php if(isset($error_msg['mobile_no'])) {
 								echo $error_msg['mobile_no'];
 							} ?>
 						</div>
@@ -125,7 +161,7 @@ if(isset($_POST['submit'])) {
 						<p>Date Of Birth:</p>
 						<input  type="text" name="dob" id="datepicker" value="" placeholder="" />
 						<div class="error_msg">
-							<?php if(isset($_POST['dob'])) {
+							<?php if(isset($error_msg['dob'])) {
 								echo $error_msg['dob'];
 							} ?>
 						</div>
@@ -135,26 +171,32 @@ if(isset($_POST['submit'])) {
 						<p>Website:</p>
 						<input type="url" name="website_url" value="" placeholder="" />
 						<div class="error_msg">
-							<?php if(isset($_POST['website_url'])) {
+							<?php if(isset($error_msg['website_url'])) {
 								echo $error_msg['website_url'];
 							} ?>
 						</div>
 					</div>
 					<div class="form-attributes">
 						<p>Gender:</p>
-						<span>Male:</span> <input type="radio" name="gender" value="male" />
-						<span>Female:</span> <input type="radio" name="gender" value="female" />
+						<span>Male:</span> <input type="radio" name="gender" value="male" <?php if(isset($gender) && ($gender == "male")) echo "checked";?> />
+						<span>Female:</span> <input type="radio" name="gender" value="female" <?php if(isset($gender) && ($gender == "female")) echo "checked";?> />
+						<div class="error_msg">
+							<?php if(isset($error_msg['gender'])) {
+								echo $error_msg['gender'];
+							} ?>
+						</div>
+
 					</div>
 					<div class="form-attributes">
 						<select name="select_one">
-							<option value="">Please Select</option>
+							<option value="NULL">Please Select</option>
 							<option value="Option 1">Option 1</option>
 							<option value="Option 2">Option 2</option>
 							<option value="Option 3">Option 3</option>
 						</select>
 
 						<div class="error_msg">
-							<?php if(isset($_POST['select_one'])) {
+							<?php if(isset($error_msg['select_one'])) {
 								echo $error_msg['select_one'];
 							} ?>
 						</div>
@@ -162,22 +204,32 @@ if(isset($_POST['submit'])) {
 
 					<div class="form-attributes">
 						<p>Select:</p>
-						<span>Red:</span> <input type="checkbox" name="checkbox_1" value="" />
-						<span>Blue:</span> <input type="checkbox" name="checkbox_2" value="" />
-						<span>Green:</span> <input type="checkbox" name="checkbox_3" value="" />
-						<span>Yellow:</span> <input type="checkbox" name="checkbox_4" value="" />
+						<span>Red:</span> <input type="checkbox" name="checkbox" value="check1" <?php if(isset($checkbox) && ($checkbox == "check1")) echo "checked";?> />
+						<span>Blue:</span> <input type="checkbox" name="checkbox" value="check2" <?php if(isset($checkbox) && ($checkbox == "check2")) echo "checked";?> />
+						<span>Green:</span> <input type="checkbox" name="checkbox" value="check3" <?php if(isset($checkbox) && ($checkbox == "check3")) echo "checked";?> />
+						<span>Yellow:</span> <input type="checkbox" name="checkbox" value="check4" <?php if(isset($checkbox) && ($checkbox == "check4")) echo "checked";?> />
+
+						<div class="error_msg">
+							<?php if(isset($error_msg['checkbox'])) {
+								echo $error_msg['checkbox'];
+							} ?>
+						</div>
 					</div>
 
 					<div class="form-attributes">
 						<p>File/Image Upload:</p>
 						<input type="file" name="img" value="" />
+						<div class="error_msg">
+							<?php if(isset($error_msg['img'])) {
+								echo $error_msg['img'];
+							} ?>
 					</div>
 
 					<div class="form-attributes">
 						<p>Comment:</p>
 						<textarea rows="5" cols="40" name="comment" placeholder="" /></textarea>
 						<div class="error_msg">
-							<?php if(isset($_POST['comment'])) {
+							<?php if(isset($error_msg['comment'])) {
 								echo $error_msg['comment'];
 							} ?>
 						</div>
